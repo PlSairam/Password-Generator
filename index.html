@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align text within the container */
+        }
+        .container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .container input, .container button {
+            width: calc(100% - 20px); /* Ensure both elements have the same width */
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .container button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #0056b3;
+        }
+        .note {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #fffbcc; /* Light yellow background to mimic a sticky note */
+            border: 1px solid #e6e600; /* Slightly darker border for contrast */
+            border-radius: 4px;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font for note */
+            white-space: pre-wrap; /* Preserve whitespace formatting */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <input type="number" id="length" placeholder="Enter password length" min="1">
+        <button onclick="generatePassword()">Generate Password</button>
+        <div class="note" id="result"></div>
+    </div>
+    <script src="Script.js"></script>
+</body>
+</html>
